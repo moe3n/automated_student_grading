@@ -1,0 +1,20 @@
+
+
+<html>
+
+<head><title>Student Grading-Teacher Dashboard </title></head>
+<body>
+     <h1>Welcome to the student's dashboard</h1>
+     <div>
+        <form action={% url "logout_user" %} method="POST">
+          {% csrf_token %}  
+         <br>
+          <input class="submit-button" type="submit" value="logout" > 
+          <br>
+        </form>
+    </div>
+</body>
+
+
+
+

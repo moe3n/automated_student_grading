@@ -1,0 +1,50 @@
+<html>
+  <head>
+      <meta charset="utf-8">
+      
+      <title>Student Grading </title>
+      
+
+  </head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'login.css' %}">
+
+  <body> 
+      
+    <div class="form-div"">
+        
+        <h1 class="title">Student log in </h1>
+        
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="form-control">
+              <br>
+            <input type="text" name="username1" placeholder="ENTER YOUR USER NAME" required/>
+            <br>
+            <input type="password" name="password1"  placeholder="ENTER YOUR USER NAME" required/>
+            <br>
+          </div>
+        
+         
+          <input class="submit-button" type="submit" value="LOG IN" > 
+          <br>
+          <br>
+          <button class="submit-button"><a href="http://127.0.0.1:8000/">Homepage</a> </a> </button>
+  
+        </form>
+
+  </div> 
+           <!-- used for alert     -->
+          <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>    
+         
+          {% if messages %}
+          {% for message in messages %}
+         <script>
+         swal("{{ message }}");
+          </script>
+         {% endfor %}
+        {% endif %}
+        
+     </body>
+    
+      </html>

@@ -1,0 +1,51 @@
+body{
+    background-image:url("images/Capture.jpg");
+    background-color :oldlace;
+    background-attachment : fixed;
+    background-repeat : no-repeat;
+    background-size : cover;
+    background-size:750px;
+    
+    }
+    
+    .title {
+        margin-top:50px;
+        color: black;
+        text-align: center;
+        text-shadow: 0 0 5px greenyellow;
+        font-family:cursive;
+    
+      }
+    
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 10px;
+    }  
+
+    .submit-button
+    {
+    background-color: white; 
+    color: white;
+    }
+
+    .submit-button:hover
+    {
+    background-color:greenyellow;
+    }       
+     
+    .form-div
+    {
+      text-align: center;
+      color: wheat;
+      background-color:oldlace;
+      width: 25%;
+      margin: auto;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 80px;
+      
+    
+    }  
+        

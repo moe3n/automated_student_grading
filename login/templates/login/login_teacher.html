@@ -1,0 +1,37 @@
+{% extends 'base_layout.html' %} {% block content %}
+
+    <div class="form-div"">
+        
+          <h1 class="display-2 text-primary">Teacher log in </h1>
+          
+          <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-control">
+                <br>
+              <input class="form-control" type="text" name="username" placeholder="ENTER YOUR USER NAME" required/>
+              <br>
+              <input class="form-control"type="password" name="password"  placeholder="ENTER YOUR PASSWORD" required/>
+              <br>
+            </div>
+          
+           <br>
+            <input class="btn btn-md btn-primary" type="submit" value="LOG IN" > 
+            <br>
+            <br>
+            <button class="btn btn-md btn-info"><a href="http://127.0.0.1:8000/">Homepage</a> </a> </button>
+    
+          </form>
+
+    </div> 
+            <!-- used for alert     -->
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            
+            {% if messages %}
+            {% for message in messages %}
+           <script>
+           swal("{{ message }}");
+           </script>
+           {% endfor %}
+          {% endif %}
+{%endblock%}
+

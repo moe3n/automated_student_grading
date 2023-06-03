@@ -1,0 +1,62 @@
+body{
+    
+  /*  background-image : url('uhhh.jpg');*/
+    background-color : oldlace;
+    background-attachment : fixed;
+    background-repeat : no-repeat;
+    background-size : cover;
+  }
+  label{
+    color: white;
+    margin: 10px;
+  }
+  
+  .title
+  {
+      
+    margin-top:20px;
+    color: black;
+    text-align: center;
+    text-shadow: 5px 5px 5px green;
+    font-family:cursive;
+      
+     
+     
+  }
+.level{
+
+  color:blue;
+}
+  input{
+    margin-top: 15px;
+    width: 30%;
+    height: 30px;
+      background: white;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  .submit-button
+  {
+    background-color: green;
+    color: white;
+  }
+  .submit-button:hover
+  {
+    background-color: red;
+  }
+  .form-div
+  {
+    text-align: center;
+    color: wheat;
+    background-color:oldlace;
+    width: 40%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 80px;
+    
+  
+  }
