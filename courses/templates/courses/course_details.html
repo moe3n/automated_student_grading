@@ -1,0 +1,35 @@
+{% extends 'base_layout.html' %} {% block content %}
+<p
+  class="display-2 text-primary"
+  style="border-bottom: 1px solid rgb(205, 231, 241)"
+>
+  {{ sub.0.subject_name }}
+</p>
+
+
+
+
+<p class="display-5 text-info pt-2">Exam List</p>
+<hr>
+{% if xms %}
+<ul class="list-group">
+  {% for exam in xms %}
+  <li class="list-group-item list-group-item-light fw-bold">
+    <a
+    class="text-primary"
+      href="http://127.0.0.1:8000/teacher/dashboard/{{sub.0.subject_id}}/{{exam.exam_id}}"
+      >{{ exam.exam_name }}</a
+    >
+  </li>
+  <br />
+
+  {% endfor %} {% else %}
+  <div class="fs-4">There is no exam for this subject!</div>
+  {% endif %}
+</ul>
+<button type="button" class="btn btn-info btn-lg text-light">
+  <a href="{% url 'login:create_exam' subject_id=subject_id %}"
+    >Create New Exam</a
+  >
+</button>
+{% endblock %}

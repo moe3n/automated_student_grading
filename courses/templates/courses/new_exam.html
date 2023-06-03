@@ -1,0 +1,58 @@
+{% extends 'base_layout.html' %} {% block content %}
+<p
+  class="display-2 text-primary pb-1"
+  style="border-bottom: 1px solid rgb(205, 231, 241)"
+>
+  Exam Creation
+</p>
+<form
+  class="form-control"
+  name="exam"
+  method="POST"
+  action="{% url 'login:create_exam' subject_id=subject_id%}"
+>
+  {% csrf_token %}
+  <label class="py-1" for="exam_id">Exam ID:</label>
+  <input class="form-control" type="text" name="exam_id" id="exam_id" />
+  <label class="py-1" for="exam_name">Exam name:</label>
+  <input class="form-control" type="text" name="exam_name" id="exam_name" />
+  <!-- <label class="py-1" for="set_number">Question Set Number(1,2,3):</label>
+  <input class="form-control" type="text" name="set_number" id="set_number" /> -->
+  <button
+    type="submit"
+    class="btn btn-outline-primary btn-lg mt-5 float-sm-end"
+    id="save-btn"
+  >
+    Submit
+  </button>
+  <br />
+  <!--   
+  <p class="fs-3 text-info">Select Subject:</p>
+  <select
+    class="form-select form-select-lg form-control mb-3"
+    name="subjects"
+    id="subjects"
+    type="text"
+    aria-label=".form-select-lg example"
+  >
+    <option selected>Select Subject</option>
+    <option value="1">Computer Security</option>
+    <option value="2">Computer Architecture</option>
+    <option value="3">Computer Networks</option>
+  </select>
+  <p class="fs-3 text-info">Select Set Number:</p>
+  <select
+    class="form-select form-select-lg form-control mb-3"
+    name="subjects"
+    id="subjects"
+    type="text"
+    aria-label=".form-select-lg example"
+  >
+    <option selected>Select Set Number</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
+</form> -->
+  {% endblock %}
+</form>

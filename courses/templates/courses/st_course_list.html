@@ -1,0 +1,50 @@
+{% extends 'base_layout.html' %} {% block content %}
+<style>
+  .container {
+    top: 0;
+    left: 0;
+    position: relative;
+    transform: translate(0%, 0%);
+  }
+</style>
+<div class="head d-flex justify-content-between"style="border-bottom: 1px solid rgb(205, 231, 241)">
+<p
+  class="display-2 text-primary"
+  
+>
+Welcome {{ uname }}
+
+</p>
+<form action={% url "login:logout_user" %} method="POST">
+  {% csrf_token %}  
+ <br>
+  <input class="btn btn-danger float-sm-end" type="submit" value="logout" > 
+  <br>
+</form>
+</div>
+<br>
+<div class="row justify-content-center">
+  {% for sub in subs %}
+  <div class="col-md-4 col-sm-6 p-1">
+    <div class="card">
+      {% load static %}
+      <img
+        class="card-img-top img-fluid"
+        
+        src="{% static 'img/bg.png'%}"
+        alt="Card image"
+      /><!-- src="https://img.freepik.com/premium-photo/abstract-painting-color-texture-modern-futuristic-pattern-loseup-painting-colorful-background_88135-37873.jpg?w=826" -->
+      <div class="card-body">
+        <h4 class="card-title">{{ sub.subject_name }}</h4>
+
+        <a href="{% url 'login:st_course_detail' subject_id=sub.subject_id %}" class="btn btn-primary"
+          >Details
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<br />
+{% endblock %}

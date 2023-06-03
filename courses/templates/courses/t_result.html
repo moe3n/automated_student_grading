@@ -1,0 +1,33 @@
+{% extends 'base_layout.html' %} {% block content %}
+<p
+  class="display-2 text-primary"
+  style="border-bottom: 1px solid rgb(205, 231, 241)"
+>
+  All Students result
+</p>
+
+
+<table class="table table-info table-hover " style="border-radius: 1.5rem;">
+  <thead>
+    <tr>
+      
+      <th scope="col">Student ID</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{  }}</th>
+      <td>{{ score}}</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>{{ score}}</td>
+      
+    </tr>
+   
+  </tbody>
+</table>
+
+{% endblock %}

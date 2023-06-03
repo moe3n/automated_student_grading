@@ -1,0 +1,44 @@
+{% extends 'base_layout.html' %} {% block content %} {% load static %}
+<p
+  class="display-4 text-primary"
+  style="border-bottom: 1px solid rgb(205, 231, 241)"
+>{{ sub.0.subject_name}} 
+  
+</p>
+
+<div class="fs-5 text-info">Exam Name:&nbsp;&nbsp;<span class="fst-italic">{{xm.0.exam_name}}</span> &nbsp; <br> Set Number:<span class="fst-italic"> {{ ques_set.0.set_number }}</span> <br> Student Name: &nbsp;{{user_name}} </div>
+<br>
+<form
+  class="form-control"
+  name="exam"
+  method="POST"
+  action="{% url 'login:take_exam' subject_id=subject_id exam_id=exam_id %}"
+>
+
+  {% csrf_token %} 
+   <!-- for question in ques -->
+  <label class="py-1" for="res_text1">{{ ques.0.question_text }}</label>
+  <textarea class="form-control" id="res_text" name="res_text1" rows="3"></textarea>
+
+  <label class="py-1" for="res_text2">{{ ques.1.question_text }}</label>
+  <textarea class="form-control" id="res_text" name="res_text2" rows="3"></textarea>
+
+
+   <!-- comment % Increment the counter variable 'i' % endcomment % -->
+   <!-- with forloop.counter as i  -->
+
+   <!-- endwith  -->
+
+ <!-- endfor  -->
+  <button
+    type="submit"
+    class="btn btn-outline-primary btn-lg mt-5 float-sm-end"
+    id="save-btn"
+  >
+    Submit
+  </button>
+  <br />
+  
+
+  {%endblock%}
+</form>

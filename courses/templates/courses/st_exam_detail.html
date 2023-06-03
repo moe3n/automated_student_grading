@@ -1,0 +1,19 @@
+{% extends 'base_layout.html' %} {% block content %}
+<p
+  class="display-2 text-primary"
+  style="border-bottom: 1px solid rgb(205, 231, 241)"
+>
+  Exam Details
+</p>
+<div class="btn btn-primary">
+  <a class="text-white" href="{% url 'login:take_exam' subject_id=subject_id exam_id=exam_id%}"
+    >Take Exam</a
+  ></div>
+
+  <br />
+  <br />
+
+  <div class="btn btn-outline-success">See Result</div>
+
+  {% endblock %}
+</div>

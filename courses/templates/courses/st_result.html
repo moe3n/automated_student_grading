@@ -1,0 +1,22 @@
+{% extends 'base_layout.html' %} {% block content %}
+<p
+  class="display-2 text-primary pb-1"
+  style="border-bottom: 1px solid rgb(205, 231, 241)"
+>
+  Student Result
+</p>
+<!-- score_list.html -->
+
+<div class="h1">Scores</div>
+<ul>
+  {% for score in scores %}
+  <li>
+    Score: {{ score.score }} Question: {{ score.question_id }} User: {{
+    score.user_id }}
+  </li>
+  {% empty %}
+  <li>No scores found.</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
